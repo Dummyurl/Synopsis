@@ -1,0 +1,384 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/rlmediaplayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_above="@+id/rltitle" >
+
+        <ImageView
+            android:id="@+id/newsimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/aaa"
+            android:layout_margin="2dp"/>
+
+
+        <!-- <include
+             android:id="@+id/tool_bar"
+             layout="@layout/tool_bar">
+
+         </include>-->
+
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/play" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlnews"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/txttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/imgline"
+
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:text="Title of the news"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="14dp"
+            />
+
+        <!-- <RelativeLayout
+             android:id="@+id/rlmusic"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="5dp">-->
+
+        <View
+            android:id="@+id/imgline"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rlaudio"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/rlaudio"
+            android:background="#818181" />
+
+        <RelativeLayout
+            android:id="@+id/rlaudio"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/audio_play_stop"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/audioplaystop"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/txtlisten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/audio_play_stop"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Listen"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+
+        <!--</RelativeLayout>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlnews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlshortby">
+
+        <TextView
+            android:id="@+id/txtnews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="11"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="10dp"
+            android:text="hello"
+            android:lineSpacingExtra="1dp"
+            android:textColor="#000000"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlshortby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlbottom"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/txtshortbyheding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-regular"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:text="short"
+            android:textSize="10dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtshortby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtshortbyheding"
+            android:fontFamily="sans-serif-light"
+            android:layout_centerVertical="true"
+            android:text="York Bansal | CNN"
+            android:textColor="#8c8c8c"
+            android:textSize="10dp"
+            />
+    </RelativeLayout>
+
+    <!--
+        <RelativeLayout
+            android:id="@+id/rllike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlbottom"
+            android:layout_marginLeft="10dp">
+
+            <RelativeLayout
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imglike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/unlike" />
+
+                <TextView
+                    android:id="@+id/txtlike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/imglike"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+
+                    android:padding="5dp"
+                    android:text="Likes"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/like">
+
+                <ImageView
+                    android:id="@+id/imgshare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/share" />
+
+                <TextView
+                    android:id="@+id/txtshare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgshare"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="Share"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    -->
+
+    <RelativeLayout
+        android:id="@+id/rlbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlfooter"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rllike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <RelativeLayout
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imglike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/unlike" />
+
+                <TextView
+                    android:id="@+id/txtlike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/imglike"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+
+                    android:padding="2dp"
+                    android:text="Likes"
+                    android:textColor="#959292"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/like">
+
+                <ImageView
+                    android:id="@+id/imgshare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/share" />
+
+                <TextView
+                    android:id="@+id/txtshare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgshare"
+                    android:fontFamily="sans-serif"
+                    android:padding="2dp"
+                    android:text="Share"
+                    android:textColor="#959292"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+
+                android:background="#dfdede" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/circlelogo" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlfooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/txtmoreat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-regular"
+            android:text="more at"
+            android:textColor="#5e5e5e"
+            android:textColorLink="#aaaaaa"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/textsource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtmoreat"
+            android:fontFamily="sans-serif-regular"
+            android:paddingLeft="3dp"
+            android:text="Twitter"
+            android:textColor="#00a4fd"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/txtrelated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/txttweets"
+            android:fontFamily="sans-serif-regular"
+            android:text="Related"
+            android:textColor="#575759"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txttweets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="sans-serif-light"
+            android:text=" Tweets"
+            android:textColor="#00befd"
+            android:textSize="16dp"
+            android:textStyle="italic"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

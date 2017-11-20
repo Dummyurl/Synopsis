@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ccc">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="1dp"
+        >
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+            <TextView
+                android:id="@+id/newstitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="It's a PopupWindow"
+                android:textSize="25dp"/>
+
+            <ToggleButton
+                android:id="@+id/audio_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play"
+                android:layout_toLeftOf="@+id/audio_next"
+                android:layout_below="@+id/newstitle"
+                android:layout_marginTop="2dp"/>
+            <Button
+                android:id="@+id/audio_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_alignParentRight="true"
+              android:layout_alignBaseline="@+id/audio_play" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

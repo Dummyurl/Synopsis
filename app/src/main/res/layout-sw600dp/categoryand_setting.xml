@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/d_background"
+    android:focusableInTouchMode="true"
+    tools:context=".CategoryandSetting">
+
+    <RelativeLayout
+        android:id="@+id/rlheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cccc"
+        android:elevation="4dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rlcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgmenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/imgmenu" />
+
+            <RelativeLayout
+                android:id="@+id/cat_close"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/arrow" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlheader"
+        android:background="#ccc" />
+
+    <LinearLayout
+        android:id="@+id/lltop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlheader">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btncategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="15dp"
+                android:text="Categories"
+                android:textAllCaps="false"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewcategories"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/btncategories"
+                android:background="#FF00FF" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btnsettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="15dp"
+                android:text="Settings"
+                android:textAllCaps="false"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewsetting"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/btnsettings"
+                android:background="#FF00FF" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lltop">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lltop">
+
+                <ListView
+                    android:id="@+id/categories_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#ccc"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@drawable/listselector"
+                    android:visibility="visible">
+
+                </ListView>
+
+               <!-- <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/categories_list"
+                    android:background="#ccc"
+                    android:visibility="visible" />-->
+
+                <!--<ListView
+                    android:id="@+id/categories_list2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/categories_list"
+                    android:divider="#ccc"
+                    android:dividerHeight="1dp"
+                    android:visibility="visible">
+
+                </ListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/categories_list2"
+                    android:background="#ccc"
+                    android:visibility="visible" />-->
+
+                <RelativeLayout
+                    android:id="@+id/rlsettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlaccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/accountimage" />
+
+                        <TextView
+                            android:id="@+id/txtaccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img1"
+                            android:padding="5dp"
+                            android:text="Account"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+
+                        <ImageView
+                            android:id="@+id/imgaccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/expendsarrow"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlallaccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlaccount"
+                        android:layout_marginLeft="20dp"
+                        android:visibility="gone">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlconnectapp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="20dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_imageapp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                app:border_color="#FF000000" />
+
+                            <RelativeLayout
+                                android:id="@+id/rlimgapp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/imgapp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_margin="3dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:background="@drawable/accountimage" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/txtappaccountname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/profile_imageapp"
+                             android:layout_toLeftOf="@+id/btnemaillogout"
+                                android:padding="5dp"
+                                android:text="Connect with email"
+                                android:textColor="#000000"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/btnemaillogout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@null"
+                                android:text="Logout"
+                                android:textAllCaps="false" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlconnectfb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlconnectapp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="20dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_imagefacebook"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                app:border_color="#FF000000" />
+
+                            <RelativeLayout
+                                android:id="@+id/rlimgfb"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="#39589b">
+
+                                <ImageView
+                                    android:id="@+id/imgfb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/ac_fb" />
+
+                                <!--<com.facebook.widget.LoginButton
+                                    android:id="@+id/btfb"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="60dp"
+                                    facebook:confirm_logout="false"
+                                    facebook:fetch_user_info="true" />-->
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/txtfbaccountname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/profile_imagefacebook"
+                                android:layout_toLeftOf="@+id/btnfblogout"
+                                android:padding="5dp"
+                                android:text="Connect with facebook"
+                                android:textColor="#000000"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/btnfblogout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@null"
+                                android:text="Logout"
+                                android:textAllCaps="false" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlconnectgplush"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlconnectfb"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="20dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_imagegplush"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                app:border_color="#FF000000" />
+
+                            <RelativeLayout
+                                android:id="@+id/rlimggplush"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="#e14932">
+
+                                <ImageView
+                                    android:id="@+id/imggplush"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/ac_gplush" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/txtgplushaccountname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/profile_imagegplush"
+                                android:layout_toLeftOf="@+id/btngplushlogout"
+                                android:padding="5dp"
+                                android:text="Connect with G+"
+                                android:textColor="#000000"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/btngplushlogout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@null"
+                                android:text="Logout"
+                                android:textAllCaps="false" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlconnecttwitter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlconnectgplush"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="20dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_imagetwitter"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                app:border_color="#FF000000" />
+
+                            <RelativeLayout
+                                android:id="@+id/rlimgtwitter"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="#00abf2">
+
+                                <ImageView
+                                    android:id="@+id/imgtwitter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/ac_twitter" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/txttwitteraccountname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/profile_imagetwitter"
+                               android:layout_toLeftOf="@+id/btntwitterlogout"
+                                android:padding="5dp"
+                                android:text="Connect with twitter"
+                                android:textColor="#000000"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/btntwitterlogout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@null"
+                                android:text="Logout"
+                                android:textAllCaps="false" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlallaccount"
+                        android:background="#ccc" />
+
+                    <RelativeLayout
+                        android:id="@+id/rllanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlallaccount"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/languageimage" />
+
+                        <TextView
+                            android:id="@+id/txtlanguage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img2"
+                            android:padding="5dp"
+                            android:text="Language"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+
+                        <TextView
+                            android:id="@+id/txtenglish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:text="English"
+                            android:textSize="25dp" />
+
+                        <ImageView
+                            android:id="@+id/imgchangelanguage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/arrow"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rllanguage"
+                        android:background="#ccc" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlnotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rllanguage"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/notificationimage" />
+
+                        <TextView
+                            android:id="@+id/txtnotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img3"
+                            android:padding="5dp"
+                            android:text="Notification"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/notificationswitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:checked="true"
+                            android:theme="@style/MySwitch" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlnotification"
+                        android:background="#ccc" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlhdimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlnotification"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/hdimage" />
+
+                        <TextView
+                            android:id="@+id/txthdimages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img4"
+                            android:padding="5dp"
+                            android:text="HD Image"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/hdimageswitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:checked="false"
+                            android:theme="@style/MySwitch" />
+                        <!-- android:textOff="OFF"
+                         android:textOn="ON"
+                         app:showText="true"-->
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlhdimage"
+                        android:background="#ccc" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlnightmode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlhdimage"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/nightmode" />
+
+                        <TextView
+                            android:id="@+id/txtnightmode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img5"
+                            android:padding="5dp"
+                            android:text="Night Mode"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/nightmodeswitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:checked="false"
+                            android:theme="@style/MySwitch" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlnightmode"
+                        android:background="#ccc" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlinvitefriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlnightmode"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img6"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/inviteimage" />
+
+                        <TextView
+                            android:id="@+id/txtinvitefriend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img6"
+                            android:padding="5dp"
+                            android:text="Invite Friends"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlinvitefriend"
+                        android:background="#ccc" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlrate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlinvitefriend"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img7"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/rateimage" />
+
+                        <TextView
+                            android:id="@+id/txtrateapp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img7"
+                            android:padding="5dp"
+                            android:text="Rate App"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlrate"
+                        android:background="#ccc" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlfeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlrate"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img8"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/feedbackimage" />
+
+                        <TextView
+                            android:id="@+id/txtfeedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img8"
+                            android:padding="5dp"
+                            android:text="Feedback"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlfeedback"
+                        android:background="#ccc" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlhowitwork"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlfeedback"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img9"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/howitwork" />
+
+                        <TextView
+                            android:id="@+id/txthowtowork"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/img9"
+                            android:padding="5dp"
+                            android:text="How it works"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlhowitwork"
+                        android:background="#ccc" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlbottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="50dp"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:background="#ccc" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/circlelogo" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

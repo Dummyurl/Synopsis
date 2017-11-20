@@ -1,0 +1,68 @@
+<resources>
+
+    <string-array name="category_name">
+        <item>All News</item>
+        <item>Trending</item>
+        <item>Top Stories</item>
+        <item>Saved Article/Bookmarks</item>
+        <item>Unread</item>
+        <item>Local</item>
+        <item>International</item>
+        <item>Business and Finance</item>
+        <item>Politics</item>
+        <item>Sports</item>
+        <item>Property</item>
+        <item>Technology</item>
+        <item>Entertainment  &amp; Gossip</item>
+        <item>Movies and Series</item>
+        <item>Health/Science</item>
+        <item>Lifestyle</item>
+        <item>Trivia</item>
+        <item>Jobs</item>
+        <item>Contact us</item>
+
+    </string-array>
+
+    <string-array name="category_image">
+        <item>@drawable/allnews</item>
+        <item>@drawable/trending</item>
+        <item>@drawable/topstory</item>
+        <item>@drawable/savedartical</item>
+        <item>@drawable/unread</item>
+        <item>@drawable/local</item>
+        <item>@drawable/international</item>
+        <item>@drawable/business</item>
+        <item>@drawable/politics</item>
+        <item>@drawable/sports</item>
+        <item>@drawable/property</item>
+        <item>@drawable/technology</item>
+        <item>@drawable/entertainment</item>
+        <item>@drawable/movies</item>
+        <item>@drawable/health</item>
+        <item>@drawable/lifestyle</item>
+        <item>@drawable/trivia</item>
+        <item>@drawable/jobs</item>
+        <item>@drawable/contactus</item>
+    </string-array>
+    <string-array name="category_id">
+        <item>0</item>
+        <item>4</item>
+        <item>3</item>
+        <item>207</item>
+        <item>209</item>
+        <item>2</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>199</item>
+        <item>200</item>
+        <item>201</item>
+        <item>202</item>
+        <item>203</item>
+        <item>204</item>
+        <item>208</item>
+    </string-array>
+</resources>

@@ -1,0 +1,277 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/rlmediaplayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/newsimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aaa" />
+
+
+        <!-- <include
+             android:id="@+id/tool_bar"
+             layout="@layout/tool_bar">
+
+         </include>-->
+
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/play" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlmediaplayer"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/imgline"
+
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:text="Title uhtih"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="17dp"
+            android:textStyle="bold"/>
+
+        <!-- <RelativeLayout
+             android:id="@+id/rlmusic"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="5dp">-->
+
+        <View
+            android:id="@+id/imgline"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rlaudio"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/rlaudio"
+            android:background="#818181" />
+
+        <RelativeLayout
+            android:id="@+id/rlaudio"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/audio_play_stop"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/audioplaystop"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/txtlisten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/audio_play_stop"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Listen"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="15dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlaudios"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <!--</RelativeLayout>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlnews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rltitle">
+
+        <TextView
+            android:id="@+id/txtnews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:maxLines="13"
+            android:text="hello"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlshortby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlnews"
+        android:layout_above="@+id/rllike"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:shadowColor="#575759"
+            android:text="Short by"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/txtshortby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txt1"
+            android:text="York Bansal | CNN"
+            android:textColor="#00befd"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rllike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlbottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/imglike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/like" />
+
+        <TextView
+            android:id="@+id/txtlike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imglike"
+            android:padding="5dp"
+            android:text="Likes"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/imgshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/txtlike"
+            android:background="@drawable/share" />
+
+        <TextView
+            android:id="@+id/txtshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imgshare"
+            android:padding="5dp"
+            android:text="Share"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlfooter"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:background="#ccc" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/circlelogo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlfooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/texts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Source:"
+            android:textColor="#575759"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/textsource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/texts"
+            android:paddingLeft="10dp"
+            android:text="Twitter"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="25dp" />
+        <TextView
+            android:id="@+id/txtrelated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Related"
+            android:layout_toLeftOf="@+id/txttweets"
+            android:textColor="#575759"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/txttweets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:text="Tweets"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="25dp" />
+    </RelativeLayout>
+</RelativeLayout>

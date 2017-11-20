@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorbrown">#ccc</color>
+    <color name="colorred">#FF0000</color>
+    <color name="colorblack">#000000</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorSecondary">#575759</color>
+    <color name="d_background">#ffffff</color>
+    <color name="d_title">#000000</color>
+    <color name="d_news">#000000</color>
+    <color name="d_shortbyheading">#000000</color>
+    <color name="d_shortby">#8c8c8c</color>
+    <color name="d_likeshare">#959292</color>
+    <color name="d_moreat">#00befd</color>
+    <color name="white">#FFFFFF</color>
+    <color name="xyz">#cccc</color>
+    <color name="default_screen_bg">#f9f9f9</color>
+    <color name="rounded_container_bg">#222222</color>
+    <color name="rounded_container_border">#3b3f44</color>
+    <color name="light_gray_header_color">#646663</color>
+    <color name="n_background">#303036</color>
+    <color name="n_title">#ffffff</color>
+    <color name="n_news">#e5e7f1</color>
+    <color name="n_shortbyheading">#ffffff</color>
+    <color name="n_source">#369af8</color>
+    <color name="n_txtlike">#b1b0b9</color>
+    <color name="n_shortby">#7b7b7c</color>
+    <color name="n_likeshare">#b1b0b9</color>
+    <color name="n_moreat">#369af8</color>
+</resources>
